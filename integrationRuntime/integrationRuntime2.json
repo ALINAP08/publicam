@@ -1,0 +1,47 @@
+{
+	"name": "integrationRuntime2",
+	"properties": {
+		"type": "Managed",
+		"typeProperties": {
+			"computeProperties": {
+				"location": "East US",
+				"nodeSize": "Standard_D8_v3",
+				"numberOfNodes": 2,
+				"maxParallelExecutionsPerNode": 8,
+				"vNetProperties": {
+					"vNetId": "/subscriptions/1e8569b7-8d8d-49d8-8401-bfcfaf9bc682/resourceGroups/MyResourceGroup/providers/Microsoft.Network/virtualNetworks/alinavirtnw",
+					"subnet": "default"
+				}
+			},
+			"ssisProperties": {
+				"catalogInfo": {
+					"catalogServerEndpoint": "alinaworkspace.database.windows.net",
+					"catalogAdminUserName": "AlinaDataFactory123A",
+					"catalogAdminPassword": {
+						"type": "SecureString",
+						"value": "**********"
+					},
+					"catalogPricingTier": "S1"
+				},
+				"edition": "Standard",
+				"licenseType": "LicenseIncluded",
+				"packageStores": [
+					{
+						"name": "myAzureFilesLinkedStorage",
+						"packageStoreLinkedService": {
+							"referenceName": "linkedService1",
+							"type": "LinkedServiceReference"
+						}
+					},
+					{
+						"name": "MySqlMIPackageStore",
+						"packageStoreLinkedService": {
+							"referenceName": "linkedService2",
+							"type": "LinkedServiceReference"
+						}
+					}
+				]
+			}
+		}
+	}
+}

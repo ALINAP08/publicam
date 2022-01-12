@@ -1,0 +1,9 @@
+{
+	"name": "AlinaDataFactory123A",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "9c14373b-a6ca-4905-95cd-10297f6bc60b",
+		"tenantId": "b41b72d0-4e9f-4c26-8a69-f949f367c91d"
+	}
+}
